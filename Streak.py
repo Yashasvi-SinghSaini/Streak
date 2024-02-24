@@ -6,13 +6,12 @@ from PIL import Image
 from Scripts import funcs
 
 app = CTk()
-app.geometry("300x500")
-app.wm_title("ReVisor")
-#app.iconbitmap("Assets/icon.ico")
+app.geometry("300x600")
+app.wm_title("Streak")
+app.iconbitmap("Assets/icon/icon.ico")
 app._set_appearance_mode('dark')
 set_default_color_theme("green")
 streak_img = Image.open('Assets/Images/Streak.png')
-streak_img.resize([1000,1000])
 
 
 with open('Assets/data/streak.txt', 'r') as file:
@@ -52,18 +51,18 @@ def button_func():
 
 
 
-frame_1 = CTkFrame(master=app, fg_color="#ff9900", border_width=5)
+frame_1 = CTkFrame(master=app, fg_color="#347B98", border_width=5)
 frame_1.grid(row=0, column=0, rowspan=3, sticky="nsew", padx=50, pady=50)
 
-title = CTkLabel(master=frame_1, text='Did You?', text_color='#ccddff', font=("Cascadia Mono SemiBold", 25), justify="center")
-button = CTkButton(master=frame_1, text="Add", command=button_func, font=("Cascadia Mono", 15))
-Lecture_check = CTkCheckBox(master=frame_1, text="Lecture", font=("Cascadia Mono", 15), corner_radius=20, fg_color='#ff3333', checkmark_color='#66ff33', text_color='#ffe6e6', checkbox_width=30, hover_color='#ff4d4d')
-Notes_check = CTkCheckBox(master=frame_1, text="Notes", font=("Cascadia Mono", 15), corner_radius=20, fg_color='#ff3333', checkmark_color='#66ff33', text_color='#ffe6e6', checkbox_width=30, hover_color='#ff4d4d')
-DPP_check = CTkCheckBox(master=frame_1, text="DPP", font=("Cascadia Mono", 15), corner_radius=20, fg_color='#ff3333', checkmark_color='#66ff33', text_color='#ffe6e6', checkbox_width=30, hover_color='#ff4d4d')
-Module_check = CTkCheckBox(master=frame_1, text="Module", font=("Cascadia Mono", 15), corner_radius=20, fg_color='#ff3333', checkmark_color='#66ff33', text_color='#ffe6e6', checkbox_width=30, hover_color='#ff4d4d')
-Matime_check = CTkCheckBox(master=frame_1, text="Matime", font=("Cascadia Mono", 15), corner_radius=20, fg_color='#ff3333', checkmark_color='#66ff33', text_color='#ffe6e6', checkbox_width=30, hover_color='#ff4d4d')
-Revisathree_check = CTkCheckBox(master=frame_1, text="Revisathree", font=("Cascadia Mono", 15), corner_radius=20, fg_color='#ff3333', checkmark_color='#66ff33', text_color='#ffe6e6', checkbox_width=30, hover_color='#ff4d4d')
-Streak_holder = CTkLabel(master=frame_1, text=streak, image=CTkImage(light_image=streak_img, dark_image=streak_img))
+title = CTkLabel(master=frame_1, text='Did You?', text_color='#ccddff', font=("Commissioner ExtraBold Italic", 25), justify="center")
+button = CTkButton(master=frame_1, text="ADD!!!", command=button_func, fg_color='#342309', font=("Commissioner Italic", 15))
+Lecture_check = CTkCheckBox(master=frame_1, text="Lecture", font=("Commissioner Medium Italic", 15), corner_radius=20, fg_color='#FB9902', checkmark_color='#FE2712', text_color='#F7D7D4', checkbox_width=30, hover_color='#FFAF38')
+Notes_check = CTkCheckBox(master=frame_1, text="Notes", font=("Commissioner Medium Italic", 15), corner_radius=20, fg_color='#FB9902', checkmark_color='#FE2712', text_color='#F7D7D4', checkbox_width=30, hover_color='#FFAF38')
+DPP_check = CTkCheckBox(master=frame_1, text="DPP", font=("Commissioner Medium Italic", 15), corner_radius=20, fg_color='#FB9902', checkmark_color='#FE2712', text_color='#F7D7D4', checkbox_width=30, hover_color='#FFAF38')
+Module_check = CTkCheckBox(master=frame_1, text="Module", font=("Commissioner Medium Italic", 15), corner_radius=20, fg_color='#FB9902', checkmark_color='#FE2712', text_color='#F7D7D4', checkbox_width=30, hover_color='#FFAF38')
+Matime_check = CTkCheckBox(master=frame_1, text="Matime", font=("Commissioner Medium Italic", 15), corner_radius=20, fg_color='#FB9902', checkmark_color='#FE2712', text_color='#F7D7D4', checkbox_width=30, hover_color='#FFAF38')
+Revisathree_check = CTkCheckBox(master=frame_1, text="Revisathree", font=("Commissioner Medium Italic", 15), corner_radius=20, fg_color='#FB9902', checkmark_color='#FE2712', text_color='#F7D7D4', checkbox_width=30, hover_color='#FFAF38')
+Streak_holder = CTkLabel(master=frame_1, text=streak, font=("Bungee Spice Regular", 40), image=CTkImage(light_image=streak_img, dark_image=streak_img, size=[100,100]), text_color="#D4DAF7")
 
 title.pack(expand=True, pady=(30, 15), padx= 20)
 Lecture_check.pack(pady=5, padx=5)
