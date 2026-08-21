@@ -4,7 +4,7 @@ import pandas
 from Scripts import funcs
 from PIL import Image
 from Scripts import funcs
-import playsound
+from playsound3 import playsound
 
 app = CTk()
 app.geometry("400x600")
